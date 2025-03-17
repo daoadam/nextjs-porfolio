@@ -2,17 +2,18 @@ import React from 'react';
 import { cn } from "../utils/cn"; // Adjust the path if needed
 import { TextGenerateEffect } from '../components/ui/TextGenerateEffect';
 import BorderMagic from './ui/BorderMagic';
+import { FaLocationArrow } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <div className='pb-20 pt-36'>
+    <div className='pb-20 pt-20'>
       <div className=' flex flex-col items-center justify-center text-white'>
 
         <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
 
         <TextGenerateEffect 
-          className="text-center text-[50px] md:text:5xl lg:text-6xl"
-          words="Hi, Im Adam"
+          className="text-center text-[50px] md:text:5xl lg:text-6xl "
+          words="Hi, I&apos;m Adam"
           / >
 
           <p className='text-center md:tracking-wider  text-sm md:text-lg lg:text-1xl'>I&apos;m a full-stack engineer based in Australia</p>
@@ -26,6 +27,8 @@ const Hero = () => {
               <a href='#About'> 
                 <BorderMagic 
                   title="View my work"
+                  icon={<FaLocationArrow />}
+                  position='right'
                 />
               </a>
 
