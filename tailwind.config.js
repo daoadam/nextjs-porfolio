@@ -1,7 +1,6 @@
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const colors = require("tailwindcss/colors");
-
 const svgToDataUri = require("mini-svg-data-uri");
 
 /** @type {import('tailwindcss').Config} */
@@ -12,6 +11,7 @@ module.exports = {
     "./components/**/*.{ts,tsx}", // ✅ Ensure Tailwind scans components
     "./pages/**/*.{ts,tsx}",
     "./data/**/*.{ts,tsx}",
+    "./ui/**/*.{ts,tsx}"
   ],
   darkMode: "class", // ✅ Enables dark mode support
 
@@ -24,19 +24,19 @@ module.exports = {
       },
     },
     extend: {
-      /* ✅ Custom Aurora Animation */
       animation: {
         aurora: "aurora 60s linear infinite",
       },
-
       keyframes: {
         aurora: {
-          "0%": { backgroundPosition: "0% 0%, 0% 0%" },
-          "100%": { backgroundPosition: "350% 50%, 350% 50%" },
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
         },
       },
-
-      /* ✅ Custom Colors */
       colors: {
         black: {
           DEFAULT: "#000",
@@ -64,17 +64,6 @@ module.exports = {
           foreground: "hsl(var(--secondary-foreground))",
         },
       },
-
-      /* ✅ Responsive Container */
-      container: {
-        center: true,
-        padding: "2rem",
-        screens: {
-          "2xl": "1400px",
-        },
-      },
-
-      /* ✅ Custom Border Radius */
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -82,18 +71,14 @@ module.exports = {
       },
     },
   },
-
   plugins: [
-    addVariablesForColors, // ✅ Keeps color variables working
+    require("tailwindcss-animate"),
+    function ({ addBase, theme }) {
+      let allColors = flattenColorPalette(theme("colors"));
+      let newVars = Object.fromEntries(
+        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+      );
+      addBase({ ":root": newVars });
+    },
   ],
 };
-
-/* ✅ This plugin adds each Tailwind color as a CSS variable */
-function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({ ":root": newVars });
-}
