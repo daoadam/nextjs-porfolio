@@ -17,7 +17,7 @@
 🔗 **SEO-Optimized** (Improved search visibility)  
 
 ## 📸 Screenshots
-![Portfolio Screenshot](https://raw.github.com/daoadam/nextjs-porfolio/blob/main/landingPage.jpg)  
+![Portfolio Screenshot](./landingPage.jpg)  
 
 
 ## 🛠️ Setup & Installation
