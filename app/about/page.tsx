@@ -3,7 +3,7 @@ import Grid from '@/components/Grid'
 
 const page = () => {
   return (
-    <div>
+    <div className="bg-gray-900 min-h-screen">
         <Grid />
     </div>
   )
