@@ -18,6 +18,7 @@
 
 ## 📸 Screenshots
 ![Portfolio Screenshot](./landingPage.jpg)  
+![Portfolio Screenshot](./aboutPage.jpg)  
 
 
 ## 🛠️ Setup & Installation
@@ -26,9 +27,13 @@
     git clone https://github.com/daoadam/nextjs-portfolio.git
 
 2.**Navigate into the project**
+    ```sh
     cd nextjs-portfolio
 
 3.**Install dependencies**
+    ```sh
     npm install
+
 4.**Run the development server:**
+    ```sh
     npm run dev
