@@ -22,7 +22,7 @@
 
 
 ## 🛠️ Setup & Installation
-. **Clone the repository:**  
+1. **Clone the repository:**  
    ```sh
    git clone https://github.com/daoadam/nextjs-portfolio.git
    ```
