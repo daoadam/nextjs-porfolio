@@ -17,8 +17,8 @@
 🔗 **SEO-Optimized** (Improved search visibility)  
 
 ## 📸 Screenshots
-![Portfolio Screenshot](https://yourimageurl.com/screenshot1.png)  
-*More screenshots available in the repo...*
+![Portfolio Screenshot](https://raw.github.com/daoadam/nextjs-porfolio/blob/main/landingPage.jpg)  
+
 
 ## 🛠️ Setup & Installation
 1. **Clone the repository:**
