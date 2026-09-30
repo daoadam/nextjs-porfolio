@@ -1,16 +1,17 @@
 import Image from "next/image";
-
+import React from "react";
 import Carousel from "./ui/carousel";
+import { FaLocationArrow } from "react-icons/fa";
+import BorderMagic from "./ui/BorderMagic";
+import Link from "next/link";
 
 const Grid = () => {
   return (
-    <section id="about" className="flex items-center justify-center min-h-screen">
-      <div
-        className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-auto gap-4 md:max-w-7xl lg:max-w-9xl"
-        style={{
-          transform: "scale(0.9)", // Scales everything to 90%, // Ensures it scales from the top
-        }}
-      >
+    <section id="about" className="flex items-center justify-center">
+
+      
+
+      <div className="p-2 md:p-4 lg:p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-auto gap-4 md:max-w-7xl scale-75" >
         
         {/* 🟠 My Story Section */}
         <div className="col-span-2 row-span-2 bg-white-100 rounded-2xl">
@@ -20,27 +21,27 @@ const Grid = () => {
               
               {/* Text Content */}
               <div className="">
-                <p className=" tracking-tighter leading-tight text-sm">
-                  I&apos;m a curious and collaborative problem-solver who enjoys learning 
+                <p className=" tracking-tighter leading-tight text-base">
+                  Hi I&apos;m Adam, a curious and collaborative problem-solver who enjoys learning 
                   and iterating to take concepts from raw ideas to polished designs, 
                   while working within evolving design systems.
                 </p>
-                <p className="mt-3 tracking-tighter leading-tight text-sm"> 
+                <p className="mt-3 tracking-tighter leading-tight text-base"> 
                   I&apos;m drawn to purpose-driven missions focused on making everyday 
                   lives easier and sparking positive change.
                 </p>
-                <p className="mt-3 tracking-tighter leading-tight text-sm">
+                <p className="mt-3 tracking-tighter leading-tight text-base">
                   With a background in software development and UX, 
                   I&apos;m bright, determined, and constantly ready to grasp 
                   new knowledge. 
                 </p>
                   
-                  <p className="mt-3 tracking-tighter leading-tight text-sm">
+                  <p className="mt-3 tracking-tighter leading-tight text-base">
                   I like to radiate warmth in my collaboration and communication, 
                   and I&apos;ve worked with teams across Product, Engineering, Marketing, 
                   and Customer Experience to bring ideas to life.
                   </p>
-                <p className="mt-3 tracking-tighter leading-tight text-sm">Thanks for stopping by!</p>
+                <p className="mt-3 tracking-tighter leading-tight text-base">Thanks for stopping by!</p>
               </div>
 
               {/* Image */}
@@ -50,7 +51,7 @@ const Grid = () => {
                   alt="Picture of young stud" 
                   width={279} 
                   height={499}
-                  className="object-cover rounded-lg shadow-lg"
+                  className=" h-auto max-w-full object-cover rounded-lg shadow-lg"
                 />
               </div>
 
@@ -71,7 +72,7 @@ const Grid = () => {
 
         
 
-              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex justify-start  gap-2 items-center">
+              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex justify-start  gap-2 items-start">
                 <Image 
                   src="/reactIcon.png" 
                   alt="react" 
@@ -87,7 +88,7 @@ const Grid = () => {
 
 
             
-              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex justify-start gap-2 items-center">
+              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex justify-start  gap-2 items-start">
                 <Image 
                   src="/nextjsIcon.jpeg" 
                   alt="nextjs" 
@@ -101,7 +102,7 @@ const Grid = () => {
                 </div>
               </div>
 
-              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex gap-2 items-center">
+              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex justify-start  gap-2 items-start">
                 <Image 
                   src="/tailwindIcon.jpg" 
                   alt="tailwind" 
@@ -115,7 +116,7 @@ const Grid = () => {
                 </div>
               </div>
 
-              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex gap-2 items-center">
+              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex justify-start  gap-2 items-start">
                 <Image 
                   src="/pythonIcon.png" 
                   alt="python" 
@@ -129,7 +130,7 @@ const Grid = () => {
                 </div>
               </div>
 
-              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex gap-2 items-center">
+              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex justify-start  gap-2 items-start">
                 <Image 
                   src="/htmlIcon.png" 
                   alt="trinity" 
@@ -143,9 +144,7 @@ const Grid = () => {
                 </div>
               </div>
 
-              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex gap-2 items-center">
               
-              </div>
 
               <div className="flex justify-start items-center col-span-3 row-span-1 md:col-span-6 lg:col-span-9">
                 <h1 className="text-lg font-semibold " >User Experience:  </h1>
@@ -165,7 +164,7 @@ const Grid = () => {
                 </div>
               </div>
 
-              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex gap-2 items-center">
+              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex justify-start  gap-2 items-start">
                 <Image 
                   src="/miroIcon.png" 
                   alt="miro" 
@@ -179,7 +178,7 @@ const Grid = () => {
                 </div>
               </div>
 
-              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex gap-2 items-center">
+              <div className="col-span-2 row-span-1 md:col-span-3 md:row-span-1 lg:col-span-3 lg:row-span-2 flex justify-start  gap-2 items-start">
                 <Image 
                   src="/whimsicalIcon.jpg" 
                   alt="whimsical" 
@@ -274,8 +273,32 @@ const Grid = () => {
         {/* 🟣 Areas of Interest Section */}
         <div className="bg-white-100 rounded-2xl">
           <div className="p-6">
+            
+            
             <h1 className="text-2xl font-bold pb-3">Areas of Interest</h1>
-            <p>Design systems, accessibility, AI, productivity and financial empowerment</p>
+
+            <div className="flex flex-col justify-start items-start">
+            <ul className="list-disc pl-4 text-base">
+              <li>Scalable but </li>
+              <li>Accessibility & Design</li>
+              <li>AI & Automation</li>
+              <li>Workflow Optimization</li>
+              <li>Web Performance</li>
+            </ul>
+
+            <p className="pt-3 pb-2 font-semibold text-lg">Projects 🚀</p>
+              <Link href="/work">
+             
+              <BorderMagic
+                  title="View my work"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                />
+             
+                
+              </Link>
+            </div>
+           
           </div>
         </div>
 
@@ -283,7 +306,7 @@ const Grid = () => {
         <div className="bg-white-100 rounded-2xl">
       <div className="p-6">
         <h1 className="text-2xl font-bold pb-3">Contact Me</h1>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
 
           {/* 🔗 LinkedIn */}
           <a href="https://www.linkedin.com/in/adamddao" 
@@ -340,6 +363,21 @@ const Grid = () => {
             <h1 className="font-medium">Email</h1>
           </a>
 
+          <a href="/https://discord.com/users/adyzz" 
+             target="_blank" rel="noopener noreferrer"
+             className="flex gap-3 items-center justify-start text-center hover:opacity-80 transition">
+            <Image 
+              src="/discord.png" 
+              alt="discord" 
+              width={1240}
+              height={1240}
+              className="w-6 h-6 object-cover rounded-full border-10"
+            />
+            <h1 className="font-medium">Discord</h1>
+          </a>
+
+          
+
         </div>
       </div>
     </div>
@@ -353,6 +391,8 @@ const Grid = () => {
         </div>
 
       </div>
+     
+     
     </section>
   );
 };

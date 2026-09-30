@@ -1,12 +1,15 @@
 import React from 'react'
 import Grid from '@/components/Grid'
 
-const page = () => {
+const Page = () => {
   return (
-    <div className="bg-gray-900 min-h-screen">
-        <Grid />
+    <div className="bg-black-100 min-h-screen xl:h-screen w-full flex items-center justify-center overflow-auto  lg:overflow-hidden" >
+    
+    <Grid /> 
+       
+  
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page
